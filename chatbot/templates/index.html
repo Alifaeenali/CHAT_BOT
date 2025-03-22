@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--general infomraion of the webpage-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <meta name="author" content="J.C. Chen">
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <link rel="shortcut icon" href='favicon.ico' type="image/x-icon">
+    <link rel="icon" href='favicon.ico' type="image/x-icon"> -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <!--end general information-->
+  <body>
+    <!--Chatbot container-->
+    <main>  
+      <div class="chatbot">
+        <div class="chat-header">
+          <h1 style="color:white">MY CHATBOT 🤖</h1>
+        </div>
+
+        <div class="spacer" id="messages-container"></div>
+        
+        <form class="chat-form" id="message-form">
+          <textarea type="text" id="message-input" placeholder="Send a message..."></textarea>
+          <button type="submit"><i class='bx bxs-chevron-up'></i></button> 
+        </form>
+      </div>
+    </main>
+    <!--end chatbot container-->
+
+    <!--Javascript to call the language model-->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!--end Javascript to call the language model-->
+  </body>
+</html>
